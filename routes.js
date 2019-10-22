@@ -5,7 +5,7 @@ const {mongourl} = require('./config/keys');
 
 const User = mongoose.model("user");
 
-mongoose.connect(mongourl,{useNewUrlParser:true,  useUnifiedTopology: true});
+mongoose.connect(process.env.MONGOURL,{useNewUrlParser:true,  useUnifiedTopology: true});
 
 module.exports = (app)=>{
 //get routes
